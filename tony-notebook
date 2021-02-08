@@ -1,1 +1,5 @@
-#
+# February 7, 2021
+- Researched how to unit test in R
+  - Links: https://towardsdatascience.com/unit-testing-in-r-68ab9cc8d211
+  - Links: https://youtu.be/bx92oCMxUhg
+ - Next Steps: will implement testthat package
