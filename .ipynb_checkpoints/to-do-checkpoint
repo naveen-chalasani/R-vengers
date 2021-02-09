@@ -1,0 +1,5 @@
+Feb 5, 2021
+1) Research on R-package implementation and best practices.
+2) Research Continuous Integration Travis-CI vs Github Actions (for R package).
+3) Research UNIT test packages/workflows etc. for R package development.
+
