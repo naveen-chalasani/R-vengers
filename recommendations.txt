@@ -1,0 +1,157 @@
+----------------------------------------------------
+
+Comedy
+https://www.imdb.com/title/tt9140560/?ref_=adv_li_tt
+https://www.imdb.com/title/tt4477976/?ref_=adv_li_tt
+https://www.imdb.com/title/tt10332588/?ref_=adv_li_tt
+https://www.imdb.com/title/tt7221388/?ref_=adv_li_tt
+https://www.imdb.com/title/tt9140342/?ref_=adv_li_tt
+https://www.imdb.com/title/tt8690918/?ref_=adv_li_tt
+https://www.imdb.com/title/tt0386676/?ref_=adv_li_tt
+https://www.imdb.com/title/tt3526078/?ref_=adv_li_tt
+https://www.imdb.com/title/tt2948372/?ref_=adv_li_tt
+https://www.imdb.com/title/tt1586680/?ref_=adv_li_tt
+
+Horror
+https://www.imdb.com/title/tt2560140/?ref_=adv_li_tt
+https://www.imdb.com/title/tt1831804/?ref_=adv_li_tt
+https://www.imdb.com/title/tt1520211/?ref_=adv_li_tt
+https://www.imdb.com/title/tt0460681/?ref_=adv_li_tt
+https://www.imdb.com/title/tt4574334/?ref_=adv_li_tt
+https://www.imdb.com/title/tt12664876/?ref_=adv_li_tt
+https://www.imdb.com/title/tt1844624/?ref_=adv_li_tt
+https://www.imdb.com/title/tt1405406/?ref_=adv_li_tt
+https://www.imdb.com/title/tt7557108/?ref_=adv_li_tt
+https://www.imdb.com/title/tt8068860/?ref_=adv_li_tt
+
+
+Action
+https://www.imdb.com/title/tt9140560/?ref_=adv_li_tt
+https://www.imdb.com/title/tt2560140/?ref_=adv_li_tt
+https://www.imdb.com/title/tt8179402/?ref_=adv_li_tt
+https://www.imdb.com/title/tt2306299/?ref_=adv_li_tt
+https://www.imdb.com/title/tt2531336/?ref_=adv_li_tt
+https://www.imdb.com/title/tt10332588/?ref_=adv_li_tt
+https://www.imdb.com/title/tt7221388/?ref_=adv_li_tt
+https://www.imdb.com/title/tt8111088/?ref_=adv_li_tt
+https://www.imdb.com/title/tt0944947/?ref_=adv_li_tt
+https://www.imdb.com/title/tt6156584/?ref_=adv_li_tt
+
+
+Adventure
+https://www.imdb.com/title/tt2560140/?ref_=adv_li_tt
+https://www.imdb.com/title/tt8179402/?ref_=adv_li_tt
+https://www.imdb.com/title/tt2306299/?ref_=adv_li_tt
+https://www.imdb.com/title/tt10332588/?ref_=adv_li_tt
+https://www.imdb.com/title/tt8111088/?ref_=adv_li_tt
+https://www.imdb.com/title/tt0944947/?ref_=adv_li_tt
+https://www.imdb.com/title/tt9845564/?ref_=adv_li_tt
+https://www.imdb.com/title/tt1831804/?ref_=adv_li_tt
+https://www.imdb.com/title/tt2948372/?ref_=adv_li_tt
+https://www.imdb.com/title/tt0293429/?ref_=adv_li_tt
+
+
+Drama
+https://www.imdb.com/title/tt9140560/?ref_=adv_li_tt
+https://www.imdb.com/title/tt3661210/?ref_=adv_li_tt
+https://www.imdb.com/title/tt10016180/?ref_=adv_li_tt
+https://www.imdb.com/title/tt2560140/?ref_=adv_li_tt
+https://www.imdb.com/title/tt8740790/?ref_=adv_li_tt
+https://www.imdb.com/title/tt9012876/?ref_=adv_li_tt
+https://www.imdb.com/title/tt8179402/?ref_=adv_li_tt
+https://www.imdb.com/title/tt6857376/?ref_=adv_li_tt
+https://www.imdb.com/title/tt3230854/?ref_=adv_li_tt
+https://www.imdb.com/title/tt2306299/?ref_=adv_li_tt
+
+
+Sci-Fi
+https://www.imdb.com/title/tt9140560/?ref_=adv_li_tt
+https://www.imdb.com/title/tt3230854/?ref_=adv_li_tt
+https://www.imdb.com/title/tt8111088/?ref_=adv_li_tt
+https://www.imdb.com/title/tt6156584/?ref_=adv_li_tt
+https://www.imdb.com/title/tt5034838/?ref_=adv_li_tt
+https://www.imdb.com/title/tt8690918/?ref_=adv_li_tt
+https://www.imdb.com/title/tt1831804/?ref_=adv_li_tt
+https://www.imdb.com/title/tt10333426/?ref_=adv_li_tt
+https://www.imdb.com/title/tt6723592/?ref_=adv_li_tt
+https://www.imdb.com/title/tt1190634/?ref_=adv_li_tt
+
+----------------------------------------------------
+
+Comedy		
+1		tt9140560
+2		tt4477976
+3		tt10332588
+4		tt7221388
+5		tt9140342
+6		tt8690918
+7		tt0386676
+8		tt3526078
+9		tt2948372
+10		tt1586680
+		
+Horror		
+1		tt2560140
+2		tt1831804
+3		tt1520211
+4		tt0460681
+5		tt4574334
+6		tt12664876
+7		tt1844624
+8		tt1405406
+9		tt7557108
+10		tt8068860
+		
+		
+Action		
+1		tt9140560
+2		tt2560140
+3		tt8179402
+4		tt2306299
+5		tt2531336
+6		tt10332588
+7		tt7221388
+8		tt8111088
+9		tt0944947
+10		tt6156584
+		
+		
+Adventure		
+1		tt2560140
+2		tt8179402
+3		tt2306299
+4		tt10332588
+5		tt8111088
+6		tt0944947
+7		tt9845564
+8		tt1831804
+9		tt2948372
+10		tt0293429
+		
+		
+Drama		
+1		tt9140560
+2		tt3661210
+3		tt10016180
+4		tt2560140
+5		tt8740790
+6		tt9012876
+7		tt8179402
+8		tt6857376
+9		tt3230854
+10		tt2306299
+		
+		
+Sci-Fi		
+1		tt9140560
+2		tt3230854
+3		tt8111088
+4		tt6156584
+5		tt5034838
+6		tt8690918
+7		tt1831804
+8		tt10333426
+9		tt6723592
+10		tt1190634
+
+----------------------------------------------------
