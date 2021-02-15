@@ -76,6 +76,18 @@ https://www.imdb.com/title/tt10333426/?ref_=adv_li_tt
 https://www.imdb.com/title/tt6723592/?ref_=adv_li_tt
 https://www.imdb.com/title/tt1190634/?ref_=adv_li_tt
 
+Animation
+https://www.imdb.com/title/tt2560140/?ref_=adv_li_tt
+https://www.imdb.com/title/tt2948372/?ref_=adv_li_tt
+https://www.imdb.com/title/tt0458290/?ref_=adv_li_tt
+https://www.imdb.com/title/tt0096697/?ref_=adv_li_tt
+https://www.imdb.com/title/tt5363918/?ref_=adv_li_tt
+https://www.imdb.com/title/tt5109280/?ref_=adv_li_tt
+https://www.imdb.com/title/tt2861424/?ref_=adv_li_tt
+https://www.imdb.com/title/tt0182576/?ref_=adv_li_tt
+https://www.imdb.com/title/tt9335498/?ref_=adv_li_tt
+https://www.imdb.com/title/tt0121955/?ref_=adv_li_tt
+
 ----------------------------------------------------
 
 Comedy		
@@ -153,5 +165,17 @@ Sci-Fi
 8		tt10333426
 9		tt6723592
 10		tt1190634
+
+Animation
+1		tt2560140
+2		tt2948372
+3		tt0458290
+4		tt0096697
+5		tt5363918
+6		tt5109280
+7		tt2861424
+8		tt0182576
+9		tt9335498
+10		tt0121955
 
 ----------------------------------------------------
