@@ -1,12 +1,13 @@
 test_that("correct surprise_me output", {
   
-  output <- surprise_me_new(2)
-  expect_is(output, 'data.frame')
+  output <- surprise_me()
+  expect_type(output, 'list')
+  expect_true(is.data.frame(output))
   expect_equal(ncol(output), 9)
-  expect_equal(nrow(output), 7*2)
-  expect_is(output$Genre, 'character')
+  expect_equal(nrow(output), 7)
+  expect_type(output$Genre, 'character')
   expect_equal(colnames(output)[5] , 'Runtime (in minutes)')
-  expect_equal(nrow(output), length(unique(output$Title)))
-  expect_error(surprise_me_new(12))
+  #expect_equal(nrow(output), length(unique(output$Title)))
+  expect_error(surprise_me('winter'), 'Please choose a valid genre.')
   
 })
