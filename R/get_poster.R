@@ -11,7 +11,7 @@
 #' get_poster('Guardians')
 #' get_poster('Guardians Galaxy', type = 'movie')
 
-get_poster <- function(search_text, type = ""){
+get_poster <- function(search_text = "", type = ""){
 
     # setup URL and API parameters 
     search_string = ""

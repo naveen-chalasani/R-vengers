@@ -11,7 +11,7 @@
 #' get_director('Guardians')
 #' get_director('Guardians Galaxy', type = 'movie')
 
-get_director <- function(search_text, type = ""){
+get_director <- function(search_text = "", type = ""){
 
     # setup URL and API parameters   
     search_string = ""

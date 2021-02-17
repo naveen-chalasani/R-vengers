@@ -12,7 +12,7 @@
 #' get_runtime('Guardians')
 #' get_runtime('Guardians Galaxy', type = 'movie')
 
-get_runtime <- function(search_text, type = ""){
+get_runtime <- function(search_text = "", type = ""){
 
     # setup URL and API parameters   
     search_string = ""

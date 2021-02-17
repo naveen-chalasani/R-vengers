@@ -11,7 +11,7 @@
 #' get_writer('Guardians')
 #' get_writer('Guardians Galaxy', type = 'movie')
 
-get_writer <- function(search_text, type = ""){
+get_writer <- function(search_text = "", type = ""){
 
     # setup URL and API parameters 
     search_string = ""
