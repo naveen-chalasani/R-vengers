@@ -4,7 +4,7 @@
 \alias{get_poster}
 \title{This function returns a link to the poster of Movies and TV shows based on search word(s) by user.}
 \usage{
-get_poster(search_text, type = "")
+get_poster(search_text = "", type = "")
 }
 \arguments{
 \item{search_text}{search text i.e., word(s) to look for in the Title.}

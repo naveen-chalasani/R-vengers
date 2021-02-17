@@ -4,7 +4,7 @@
 \alias{get_director}
 \title{This function returns the director of Movies and TV shows based on search word(s) by user.}
 \usage{
-get_director(search_text, type = "")
+get_director(search_text = "", type = "")
 }
 \arguments{
 \item{search_text}{search text i.e., word(s) to look for in the Title.}

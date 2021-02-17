@@ -4,7 +4,7 @@
 \alias{read_plot}
 \title{This function returns the plot of Movies and TV shows based on search word(s) by user.}
 \usage{
-read_plot(search_text, type = "")
+read_plot(search_text = "", type = "")
 }
 \arguments{
 \item{search_text}{search text i.e., word(s) to look for in the Title.}

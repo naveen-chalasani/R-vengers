@@ -4,7 +4,7 @@
 \alias{get_awards}
 \title{This function returns the awards received by Movies and TV shows based on search word(s) by user.}
 \usage{
-get_awards(search_text, type = "")
+get_awards(search_text = "", type = "")
 }
 \arguments{
 \item{search_text}{search text i.e., word(s) to look for in the Title.}

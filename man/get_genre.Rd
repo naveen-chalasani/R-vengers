@@ -4,7 +4,7 @@
 \alias{get_genre}
 \title{This function returns the genre of Movies and TV shows based on search word(s) by user.}
 \usage{
-get_genre(search_text, type = "")
+get_genre(search_text = "", type = "")
 }
 \arguments{
 \item{search_text}{search text i.e., word(s) to look for in the Title.}
