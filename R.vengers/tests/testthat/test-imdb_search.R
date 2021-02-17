@@ -1,3 +1,5 @@
+library(jsonlite)
+
 test_that("errors for incorrect input", {
   
   expect_error(imdb_search('abcdefg'), "Incorrect IMDb ID.")
