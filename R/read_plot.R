@@ -11,7 +11,7 @@
 #' read_plot('Guardians')
 #' read_plot('Guardians Galaxy', type = 'movie')
 
-read_plot <- function(search_text, type = ""){
+read_plot <- function(search_text = "", type = ""){
 
     # setup URL and API parameters  
     search_string = ""

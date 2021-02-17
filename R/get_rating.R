@@ -11,7 +11,7 @@
 #' get_rating('Guardians')
 #' get_rating('Guardians Galaxy', type = 'movie')
 
-get_rating <- function(search_text, type = ""){
+get_rating <- function(search_text = "", type = ""){
 
     # setup URL and API parameters  
     search_string = ""

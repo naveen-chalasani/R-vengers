@@ -11,7 +11,7 @@
 #' search('Guardians')
 #' search('Guardians Galaxy', type = 'movie')
 
-search <- function(search_text, type = ""){
+search <- function(search_text = "", type = ""){
 
     # setup URL and API parameters  
     search_string = ""

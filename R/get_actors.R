@@ -11,7 +11,7 @@
 #' get_actors('Guardians')
 #' get_actors('Guardians Galaxy', type = 'movie')
 
-get_actors <- function(search_text, type = ""){
+get_actors <- function(search_text = "", type = ""){
 
     # setup URL and API parameters   
     search_string = ""

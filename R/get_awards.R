@@ -11,7 +11,7 @@
 #' get_awards('Guardians')
 #' get_awards('Guardians Galaxy', type = 'movie')
 
-get_awards <- function(search_text, type = ""){
+get_awards <- function(search_text = "", type = ""){
 
     # setup URL and API parameters  
     search_string = ""

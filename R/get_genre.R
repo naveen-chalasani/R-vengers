@@ -11,7 +11,7 @@
 #' get_genre('Guardians')
 #' get_genre('Guardians Galaxy', type = 'movie')
 
-get_genre <- function(search_text, type = ""){
+get_genre <- function(search_text = "", type = ""){
 
     # setup URL and API parameters  
     search_string = ""
