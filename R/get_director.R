@@ -13,6 +13,12 @@
 
 get_director <- function(search_text = "", type = ""){
 
+    # check if valid type is provided
+    valid_types <- c("", "movie", "series", "episode", "game")
+    if(!type %in% valid_types) {
+        stop(paste0("Type is invalid. Please use one of these : movie, series, episode, game"))
+    }
+
     # setup URL and API parameters   
     search_string = ""
     if(length(search_text)) {
