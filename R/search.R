@@ -8,10 +8,10 @@
 #' @export
 #'
 #' @examples 
-#' search('Guardians')
-#' search('Guardians Galaxy', type = 'movie')
+#' search_all('Guardians')
+#' search_all('Guardians Galaxy', type = 'movie')
 
-search <- function(search_text = "", type = ""){
+search_all <- function(search_text = "", type = ""){
 
     # setup URL and API parameters  
     search_string = ""
