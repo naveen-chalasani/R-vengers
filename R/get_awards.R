@@ -11,7 +11,11 @@
 #' get_awards('Guardians')
 #' get_awards('Guardians Galaxy', type = 'movie')
 
-get_awards <- function(search_text = "", type = ""){
+get_awards <- function(search_text = "", type = ''){
+    
+    if(search_text == '') {
+        stop(paste0('No input provided. Please search again.'))
+    }
 
     # check if valid type is provided
     valid_types <- c("", "movie", "series", "episode", "game")
@@ -20,17 +24,18 @@ get_awards <- function(search_text = "", type = ""){
     }
 
     # setup URL and API parameters  
-    search_string = ""
-    if(length(search_text)) {
-        search_string = search_text
-    } else {
-        stop(paste0("No input provided. Please search again."))
-    }  
+    # search_string = ""
+    # if(length(search_text)) {
+    #     search_string = search_text
+    # } else {
+    #     stop(paste0("No input provided. Please search again."))
+    # } 
+    
     base_search_url <- "http://www.omdbapi.com/?s="
     id_search_url <- "http://www.omdbapi.com/?i="
     type = paste0("type=",type)
     apikey <- "apikey=a79b2c95"
-    search <- gsub(" ", "+", search_string)
+    search <- gsub(" ", "+", search_text)
 
     # query the API using GET request, and parse the http response as JSON
     search_url <- paste0(base_search_url, paste(search, type, apikey, sep = '&'))

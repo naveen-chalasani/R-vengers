@@ -36,8 +36,10 @@ get_top10_recommendations <- function(genre = 'adventure'){
         top10 <- horror
         } else if ( genre == 'animation'){
         top10 <- animation
-        } else {
+        } else if ((genre == 'adventure') | (genre == '')) {
         top10 <- adventure
+        } else {
+          stop(paste0("Please provide a valid genre."))
         }
 
     # setup URL and API parameters   

@@ -1,3 +1,11 @@
+test_that("errors for incorrect input", {
+  
+  expect_error(get_director('winter', 'summer'), "Type is invalid. Please use one of these : movie, series, episode, game")
+  expect_error(get_director(), "No input provided. Please search again.")
+  
+})
+
+
 test_that("correct director output", {
   
   output <- get_director('boy', 'movie')

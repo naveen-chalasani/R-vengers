@@ -1,3 +1,11 @@
+test_that("errors for incorrect input", {
+  
+  expect_error(search_all('winter', 'summer'), "Type is invalid. Please use one of these : movie, series, episode, game")
+  expect_error(search_all(), "No input provided. Please search again.")
+  
+})
+
+
 test_that("correct search output", {
   
   output <- search_all('queen', 'movie')

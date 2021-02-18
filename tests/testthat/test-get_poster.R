@@ -1,3 +1,11 @@
+test_that("errors for incorrect input", {
+  
+  expect_error(get_poster('winter', 'summer'), "Type is invalid. Please use one of these : movie, series, episode, game")
+  expect_error(get_poster(), "No input provided. Please search again.")
+  
+})
+
+
 test_that("correct poster output", {
   
   output <- get_poster('glass', 'movie')

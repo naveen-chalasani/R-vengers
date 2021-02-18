@@ -1,3 +1,11 @@
+test_that("errors for incorrect input", {
+  
+  expect_error(get_writer('winter', 'summer'), "Type is invalid. Please use one of these : movie, series, episode, game")
+  expect_error(get_writer(), "No input provided. Please search again.")
+  
+})
+
+
 test_that("correct writer output", {
   
   output <- get_writer('girl', 'movie')
