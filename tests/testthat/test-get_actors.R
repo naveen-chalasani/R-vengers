@@ -1,3 +1,10 @@
+test_that("errors for incorrect input", {
+  
+  expect_error(get_actors('winter', 'summer'), "Type is invalid. Please use one of these : movie, series, episode, game")
+  expect_error(get_actors(), "No input provided. Please search again.")
+  
+})
+
 test_that("correct actors output", {
   
   output <- get_actors('black', 'movie')
