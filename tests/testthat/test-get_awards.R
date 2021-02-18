@@ -1,3 +1,11 @@
+test_that("errors for incorrect input", {
+  
+  expect_error(get_awards('winter', 'summer'), "Type is invalid. Please use one of these : movie, series, episode, game")
+  expect_error(get_awards(), "No input provided. Please search again.")
+  
+})
+
+
 test_that("correct awards output", {
   
   output <- get_awards('flower', 'movie')

@@ -1,3 +1,11 @@
+test_that("errors for incorrect input", {
+  
+  expect_error(read_plot('winter', 'summer'), "Type is invalid. Please use one of these : movie, series, episode, game")
+  expect_error(read_plot(), "No input provided. Please search again.")
+  
+})
+
+
 test_that("correct plot output", {
   
   output <- read_plot('women', 'movie')

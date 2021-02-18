@@ -1,3 +1,11 @@
+test_that("errors for incorrect input", {
+  
+  expect_error(get_genre('winter', 'summer'), "Type is invalid. Please use one of these : movie, series, episode, game")
+  expect_error(get_genre(), "No input provided. Please search again.")
+  
+})
+
+
 test_that("correct genre output", {
   
   output <- get_genre('east', 'movie')

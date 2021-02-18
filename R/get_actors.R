@@ -11,14 +11,14 @@
 #' get_actors('Guardians')
 #' get_actors('Guardians Galaxy', type = 'movie')
 
-get_actors <- function(search_text= "", type = 'movie'){
+get_actors <- function(search_text= "", type = ''){
 
-    if((search_text == '') | (type == '')) {
+    if(search_text == '') {
         stop(paste0('No input provided. Please search again.'))
     }
     
     # check if valid type is provided
-    valid_types <- c("movie", "series", "episode", "game")
+    valid_types <- c("", "movie", "series", "episode", "game")
     if(!type %in% valid_types) {
         stop(paste0("Type is invalid. Please use one of these : movie, series, episode, game"))
     }

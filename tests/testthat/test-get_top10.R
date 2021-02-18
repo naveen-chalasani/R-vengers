@@ -1,3 +1,10 @@
+test_that("errors for incorrect input", {
+  
+  expect_error(get_top10_recommendations('winter'), "Please provide a valid genre.")
+  
+})
+
+
 test_that("correct recommendation output", {
   
   output <- get_top10_recommendations('drama')
