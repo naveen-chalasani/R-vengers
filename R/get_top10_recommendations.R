@@ -1,6 +1,6 @@
 #' This function returns the attributes of Top 10 most popular movies and TV shows by Genre.
 #'
-#' @param genre Genre of recommendations can be - action, adventure, comedy, drama, scifi, horror, animation
+#' @param genre Genre of recommendations can be - action, adventure, comedy, romance, drama, scifi, horror, animation
 #'     Default genre is adventure when there is no input from user.
 #' 
 #' @return A dataframe that contains the list of search results.
@@ -17,6 +17,7 @@ get_top10_recommendations <- function(genre = 'adventure'){
     action <- c('tt9140560', 'tt2560140', 'tt8179402', 'tt2306299', 'tt2531336', 'tt10332588', 'tt7221388', 'tt8111088', 'tt0944947', 'tt6156584')    
     adventure <- c('tt2560140', 'tt8179402', 'tt2306299', 'tt10332588', 'tt8111088', 'tt0944947', 'tt9845564', 'tt1831804', 'tt2948372', 'tt0293429')
     comedy <- c('tt9140560', 'tt4477976', 'tt10332588', 'tt7221388', 'tt9140342', 'tt8690918', 'tt0386676', 'tt3526078', 'tt2948372', 'tt1586680')
+    romance <- c('tt9012876', 'tt8740790', 'tt12676326', 'tt2306299', 'tt10333426', 'tt3006802', 'tt0413573', 'tt1442437', 'tt5420376', 'tt5555260')
     drama <- c('tt9140560', 'tt3661210', 'tt10016180', 'tt2560140', 'tt8740790', 'tt9012876', 'tt8179402', 'tt6857376', 'tt3230854', 'tt2306299')
     scifi <- c('tt9140560', 'tt3230854', 'tt8111088', 'tt6156584', 'tt5034838', 'tt8690918', 'tt1831804', 'tt10333426', 'tt6723592', 'tt1190634')
     horror <- c('tt2560140', 'tt1831804', 'tt1520211', 'tt0460681', 'tt4574334', 'tt12664876', 'tt1844624', 'tt1405406', 'tt7557108', 'tt8068860')
@@ -28,6 +29,8 @@ get_top10_recommendations <- function(genre = 'adventure'){
         top10 <- action
         } else if ( genre == 'comedy') {
         top10 <- comedy
+        } else if ( genre == 'romance') {
+        top10 <- romance
         } else if ( genre == 'drama') {
         top10 <- drama
         } else if ( genre == 'scifi') {
