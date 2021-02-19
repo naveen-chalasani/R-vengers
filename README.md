@@ -3,7 +3,9 @@
 <!-- badges: end -->
 
 <!-- badges: start -->
+[![test-coverage](https://github.com/naveen-chalasani/R.vengers/workflows/test-coverage/badge.svg)](https://github.com/naveen-chalasani/R.vengers/actions)
 <!-- badges: end -->
+
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
