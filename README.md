@@ -1,11 +1,6 @@
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/naveen-chalasani/R.vengers/workflows/R-CMD-check/badge.svg)](https://github.com/naveen-chalasani/R.vengers/actions)
+[![R-CMD-check](https://github.com/naveen-chalasani/R.vengers/workflows/R-CMD-check/badge.svg)](https://github.com/naveen-chalasani/R.vengers/actions)  [![test-coverage](https://github.com/naveen-chalasani/R.vengers/workflows/test-coverage/badge.svg)](https://github.com/naveen-chalasani/R.vengers/actions)  [![Codecov test coverage](https://codecov.io/gh/naveen-chalasani/R.vengers/branch/main/graph/badge.svg)](https://codecov.io/gh/naveen-chalasani/R.vengers?branch=main)
 <!-- badges: end -->
-
-<!-- badges: start -->
-[![test-coverage](https://github.com/naveen-chalasani/R.vengers/workflows/test-coverage/badge.svg)](https://github.com/naveen-chalasani/R.vengers/actions)
-<!-- badges: end -->
-
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
