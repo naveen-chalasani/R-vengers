@@ -7,7 +7,7 @@
 get_top10_recommendations(genre = "adventure")
 }
 \arguments{
-\item{genre}{Genre of recommendations can be - action, adventure, comedy, drama, scifi, horror, animation
+\item{genre}{Genre of recommendations can be - action, adventure, comedy, romance, drama, scifi, horror, animation
 Default genre is adventure when there is no input from user.}
 }
 \value{

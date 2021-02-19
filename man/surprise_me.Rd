@@ -7,7 +7,7 @@
 surprise_me(genre = "all")
 }
 \arguments{
-\item{genre}{Genre of recommendations can be - action, adventure, comedy, drama, scifi, horror, animation
+\item{genre}{Genre of recommendations can be - action, adventure, comedy, romance, drama, scifi, horror, animation
 When there is no input genre from user, a random recommendation from each of the genres is given.}
 }
 \value{
