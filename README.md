@@ -30,6 +30,8 @@ You can install the development version from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
+
+
 devtools::install_github("naveen-chalasani/R.vengers")
 ```
 ## Example
@@ -43,3 +45,20 @@ library(R.vengers)
 avengers_movies()
 surprise_me()
 ```
+
+## Table of Functions
+| Function | Description |
+|:--|:-----|
+| `avengers_movies` |  returns a dataframe with information of all Marvel Avengers movies  |
+| `get_top10_recommendations` |  returns a dataframe of the top 10 recommended movies/tv-series based on specified genre |
+| `surprise_me` |  returns a dataframe with titles and information to a random list of movies/tv-series based on specified genre  |
+| `get_actors` |  returns a dataframe with a column containing the actors of a movie, tv-series, or game |
+| `get_awards` |  returns a dataframe with a column containing the awards won by a movie, tv-series, or game  |
+| `get_director` |  returns a dataframe with a column containing the director(s)  of a movie, tv-series, or game  |
+| `get_genre` |  returns a dataframe with a column containing the genre(s) of a movie, tv-series, or game  |
+| `get_poster` |  returns a dataframe with a column containing the link to a visual poster of a movie, tv-series, or game  |
+| `get_rating` |  returns a dataframe with a column containing the IMDB Rating of a movie, tv-series, or game  |
+| `get_runtime` |  returns a dataframe with a column containing the runtime of a movie, tv-series, or game  |
+| `get_writer` |  returns a dataframe with a column containing the writer(s) of a movie, tv-series, or game  |
+| `read_plot` |  returns a dataframe with a column containing the full plot of a movie, tv-series, or game  |
+| `search_all` |  returns a dataframe with attributes and information to a list of movies, tv-series, or games  |
