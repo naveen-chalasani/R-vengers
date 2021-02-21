@@ -18,7 +18,11 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of R.vengers is to ...
+```R.vengers``` is a package to wrap the RESTful API http://www.omdbapi.com/.
+
+The OMDb API is a RESTful web service to obtain movie information, all content and images on the site are contributed and maintained by their users. For more information, visit their website: http://www.omdbapi.com/
+
+The API for the OMDb webservices can be accessed here: http://www.omdbapi.com/
 
 ## Installation
 
