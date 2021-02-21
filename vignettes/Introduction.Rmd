@@ -7,13 +7,444 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r, include = FALSE}
+```{r, echo = FALSE, message = FALSE}
 knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
-)
+  collapse = TRUE, 
+  comment = "#>")
 ```
 
 ```{r setup}
 library(R.vengers)
+```
+
+# Overview
+Welcome to the R.vengers package! 
+
+# Table of Functions
+| Function | Description |
+|:--|:-----|
+| `avengers_movies` |  returns a dataframe with information of all Marvel Avengers movies  |
+| `get_top10_recommendations` |  returns a dataframe of the top 10 recommended movies/tv-series based on specified genre |
+| `surprise_me` |  returns a dataframe with titles and information to a random list of movies/tv-series based on specified genre  |
+| `get_actors` |  returns a dataframe with a column containing the actors of a movie, tv-series, or game |
+| `get_awards` |  returns a dataframe with a column containing the awards won by a movie, tv-series, or game  |
+| `get_director` |  returns a dataframe with a column containing the director(s)  of a movie, tv-series, or game  |
+| `get_genre` |  returns a dataframe with a column containing the genre(s) of a movie, tv-series, or game  |
+| `get_poster` |  returns a dataframe with a column containing the link to a visual poster of a movie, tv-series, or game  |
+| `get_rating` |  returns a dataframe with a column containing the IMDB Rating of a movie, tv-series, or game  |
+| `get_runtime` |  returns a dataframe with a column containing the runtime of a movie, tv-series, or game  |
+| `get_writer` |  returns a dataframe with a column containing the writer(s) of a movie, tv-series, or game  |
+| `read_plot` |  returns a dataframe with a column containing the full plot of a movie, tv-series, or game  |
+| `search_all` |  returns a dataframe with attributes and information to a list of movies, tv-series, or games  |
+
+#### avengers_movies(): Returns all Marvel Avengers movies
+`avengers_movies()` returns a dataframe of all Marvel Avengers movies.    
+
+- The dataframe contains information such as Title, Type, Year, Genre, Runtime, Actors, Director, Awards, and IMDB Rating.
+```{r, eval = FALSE}
+avengers_movies()
+```
+
+| Title |	Type |	Year |	Genre |	Runtime (in minutes) |	Actors |	Director |	Awards |	IMDB Rating |
+|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+|$<chr>$|$<chr>$|$<dbl>$|$<chr>$|$<dbl>$|$<chr>$|$<chr>$|$<chr>$|$<dbl>$|
+| Iron Man  |                         	movie	| 2008	| Action, Adventure, Sci-Fi |                 126	| Robert Downey Jr., Terrence Howard, Jeff Bridges, Gwyneth Paltrow  |  	Jon Favreau |            	Nominated for 2 Oscars. Another 22 wins & 70 nominations. |        	7.9 | 
+| The Incredible Hulk |               	movie	| 2008	| Action, Adventure, Sci-Fi  |               	112	| Edward Norton, Liv Tyler, Tim Roth, William Hurt |                    	Louis Leterrier |        	1 win & 10 nominations. |                                          	6.7 |
+| Iron Man 2  |                       	movie	| 2010	| Action, Adventure, Sci-Fi |                	124	| Robert Downey Jr., Gwyneth Paltrow, Don Cheadle, Scarlett Johansson |	Jon Favreau |            	Nominated for 1 Oscar. Another 7 wins & 43 nominations. |          	7.0 |
+| Thor  |                             	movie	| 2011	| Action, Adventure, Fantasy  |              	115	| Chris Hemsworth, Natalie Portman, Tom Hiddleston, Anthony Hopkins |   	Kenneth Branagh  |       	5 wins & 30 nominations. |                                         	7.0 |
+| Captain America: The First Avenger	| movie	| 2011	| Action, Adventure, Sci-Fi |                	124	| Chris Evans, Hayley Atwell, Sebastian Stan, Tommy Lee Jones |         	Joe Johnston |           	4 wins & 46 nominations. |                                         	6.9 |
+| The Avengers  |                     	movie	| 2012	| Action, Adventure, Sci-Fi |                	143	| Robert Downey Jr., Chris Evans, Mark Ruffalo, Chris Hemsworth |       	Joss Whedon  |           	Nominated for 1 Oscar. Another 38 wins & 79 nominations. |         	8.0 |
+| Iron Man 3  |                       	movie	| 2013	| Action, Adventure, Sci-Fi |                	130	| Robert Downey Jr., Gwyneth Paltrow, Don Cheadle, Guy Pearce |         	Shane Black  |           	Nominated for 1 Oscar. Another 20 wins & 62 nominations. |         	7.1 |
+| Thor: The Dark World  |             	movie	| 2013	| Action, Adventure, Fantasy  |              	112	| Chris Hemsworth, Natalie Portman, Tom Hiddleston, Anthony Hopkins |   	Alan Taylor  |           	3 wins & 21 nominations. |                                          	6.9 |
+| Captain America: The Winter Soldier	| movie	| 2014	| Action, Adventure, Sci-Fi, Thriller  |     	136	| Chris Evans, Samuel L. Jackson, Scarlett Johansson, Robert Redford |  	Anthony Russo, Joe Russo	| Nominated for 1 Oscar. Another 5 wins & 50 nominations.  |         	7.7 |
+| Guardians of the Galaxy |           	movie	| 2014	| Action, Adventure, Comedy, Sci-Fi |        	121	| Chris Pratt, Zoe Saldana, Dave Bautista, Vin Diesel |                 	James Gunn |             	Nominated for 2 Oscars. Another 52 wins & 100 nominations. |       	8.0 |
+| Avengers: Age of Ultron |           	movie	| 2015	| Action, Adventure, Sci-Fi |                	141	| Robert Downey Jr., Chris Hemsworth, Mark Ruffalo, Chris Evans |       	Joss Whedon  |           	8 wins & 49 nominations. |                                         	7.3 |
+| Ant-Man |                           	movie	| 2015	| Action, Adventure, Comedy, Sci-Fi |        	117	| Paul Rudd, Michael Douglas, Evangeline Lilly, Corey Stoll |           	Peyton Reed  |           	Nominated for 1 BAFTA Film Award. Another 4 wins & 33 nominations.	| 7.3 |
+| Captain America: Civil War  |       	movie	| 2016	| Action, Adventure, Sci-Fi |                	147	| Chris Evans, Robert Downey Jr., Scarlett Johansson, Sebastian Stan  | 	Anthony Russo, Joe Russo	| 16 wins & 67 nominations. |                                        	7.8 |
+| Doctor Strange  |                   	movie	| 2016	| Action, Adventure, Fantasy, Sci-Fi  |      	115	| Benedict Cumberbatch, Chiwetel Ejiofor, Rachel McAdams, Benedict Wong |	Scott Derrickson  |      	Nominated for 1 Oscar. Another 19 wins & 66 nominations.  |        	7.5 |
+| Guardians of the Galaxy Vol. 2  |   	movie	| 2017	| Action, Adventure, Comedy, Sci-Fi |        	136	| Chris Pratt, Zoe Saldana, Dave Bautista, Vin Diesel |                 	James Gunn |             	Nominated for 1 Oscar. Another 15 wins & 57 nominations. |         	7.6 |
+| Spider-Man: Homecoming  |           	movie	| 2017	| Action, Adventure, Sci-Fi |                	133	| Tom Holland, Michael Keaton, Robert Downey Jr., Marisa Tomei  |       	Jon Watts  |             	7 wins & 10 nominations. |                                          	7.4 |
+| Thor: Ragnarok  |                   	movie	| 2017	| Action, Adventure, Comedy, Fantasy, Sci-Fi	| 130	| Chris Hemsworth, Tom Hiddleston, Cate Blanchett, Idris Elba  |        	Taika Waititi |          	6 wins & 50 nominations.  |                                        	7.9 |
+| Black Panther |                     	movie	| 2018	| Action, Adventure, Sci-Fi |                	134	| Chadwick Boseman, Michael B. Jordan, Lupita Nyong'o, Danai Gurira |   	Ryan Coogler |           	Won 3 Oscars. Another 107 wins & 265 nominations.  |               	7.3 |
+| Avengers: Infinity War  |           	movie	| 2018	| Action, Adventure, Sci-Fi |                	149	| Robert Downey Jr., Chris Hemsworth, Mark Ruffalo, Chris Evans |        	Anthony Russo, Joe Russo	| Nominated for 1 Oscar. Another 46 wins & 73 nominations. |         	8.4 |
+| Ant-Man and the Wasp  |             	movie	| 2018	| Action, Adventure, Comedy, Sci-Fi |        	118	| Paul Rudd, Evangeline Lilly, Michael Peña, Walton Goggins |           	Peyton Reed  |           	1 win & 20 nominations.  |                                         	7.1 |
+| Captain Marvel  |                   	movie	| 2019	| Action, Adventure, Sci-Fi |                	123	| Brie Larson, Samuel L. Jackson, Ben Mendelsohn, Jude Law  |           	Anna Boden, Ryan Fleck | 	8 wins & 49 nominations. |                                         	6.9 |
+| Avengers: Endgame |                 	movie	| 2019	| Action, Adventure, Drama, Sci-Fi  |        	181	| Robert Downey Jr., Chris Evans, Mark Ruffalo, Chris Hemsworth |       	Anthony Russo, Joe Russo	| Nominated for 1 Oscar. Another 69 wins & 102 nominations. |        	8.4 |
+
+
+#### get_top10_recommendations(): Returns the top 10 recommended movies and tv-series based on genre
+`get_top10_recommendations(genre)` returns a dataframe of the top 10 recommended movies or tv-series based on the specified genre.  
+
+- The user can replace the parameter genre with arguments such as action, adventure, animation, comedy, drama, horror, romance, or scifi.    
+- In this example, the user will be provided with the top 10 recommended animated movies/tv-series.
+
+```{r, eval = FALSE}
+get_top10_recommendations("animation")
+```
+
+| Title | Type | Year | Genre | Runtime (in minutes) | Actors | Director | Awards | IMDB Rating |
+|-:|-:|-:|-:|-:|-:|-:|-:|-:|
+| $<chr>$  | $<chr>$  | $<dbl>$  | $<chr>$ | $<dbl>$ | $<chr>$ | $<chr>$ | $<chr>$ | $<dbl>$ | 
+| Attack on Titan |  series  | NA | Animation, Action, Adventure, Drama, Fantasy, Horror | 24 | Marina Inoue, Yûki Kaji, Yui Ishikawa, Josh Grelle	 | N/A | 8 wins & 7 nominations. | 8.8 |
+| Soul |  movie  | 2020 |  Animation, Adventure, Comedy, Family, Fantasy, Music | 100 | Jamie Foxx, Tina Fey, Graham Norton, Rachel House | Pete Docter, Kemp Powers(co-director) | 37 wins & 28 nominations. | N/A | 2 wins & 2 nominations. | 8.1 |
+| Star Wars: The Clone Wars |  series  | NA |  Animation, Action, Adventure, Drama, Fantasy, Sci-Fi | 23 | Tom Kane, Dee Bradley Baker, Matt Lanter, James Arnold Taylor | N/A | 23 wins & 69 nominations. | 8.3 |
+| The Simpsons |  series  | NA | Animation, Comedy | 22 | Dan Castellaneta, Nancy Cartwright, Harry Shearer, Julie Kavner | N/A | Nominated for 1 Golden Globe. Another 168 wins & 302 nominations. | 8.7 |
+| Disenchantment |  series  | NA | Animation, Action, Adventure, Comedy, Fantasy | 30 | Abbi Jacobson, Eric André, Nat Faxon, John DiMaggio | N/A | N/A | 7.2 |
+| Raya and the Last Dragon |  movie  | 2021 | Animation, Action, Adventure, Comedy, Family, Fantasy, Musical | NA | Kelly Marie Tran, Awkwafina | Don Hall, Carlos López Estrada, Paul Briggs(co-director), John Ripa(co-director) | N/A | 7.2 |
+| Rick and Morty |  series  | NA | Animation, Adventure, Comedy, Sci-Fi | 23 | Justin Roiland, Chris Parnell, Spencer Grammer, Sarah Chalke | N/A | Won 2 Primetime Emmys. Another 15 wins & 21 nominations. | 9.2
+| Family Guy |  series  | NA | Animation, Comedy | 22 | Seth MacFarlane, Alex Borstein, Seth Green, Mila Kunis | N/A | Won 9 Primetime Emmys. Another 28 wins & 101 nominations. | 8.1 |
+| Demon Slayer: Kimetsu No Yaiba |  series  | NA | Animation, Action, Fantasy, Thriller | 25 | Natsuki Hanae, Zach Aguilar, Abby Trott, Aleks Le | N/A | 1 win & 1 nomination. | 8.7 |
+| South Park |  series  | NA | Animation, Comedy | 22 | Trey Parker, Matt Stone, Mona Marshall, April Stewart | N/A | Won 5 Primetime Emmys. Another 13 wins & 87 nominations. | 8.7 |
+
+#### surprise_me(): Returns random movies or tv-series
+`surprise_me(genre)` returns a dataframe with information to 5 random movies of the specified genre.     
+
+- The user can replace the parameter genre with arguments such as action, adventure, animation, comedy, drama, horror, romance, or scifi.    
+- If no argument is provided, the function will return a dataframe with information to 1 random movie from each of the available genres above.
+- In this example, since no genre is specified, the function returns a dataframe with information to 1 random movie from each of the available genres.
+```{r, eval = FALSE}
+surprise_me()
+```
+
+| Title | Type | Year | Genre | Runtime (in minutes) | Actors | Director | Awards | IMDB Rating |
+|-:|-:|-:|-:|-:|-:|-:|-:|-:|
+| $<chr>$  | $<chr>$  | $<dbl>$  | $<chr>$ | $<dbl>$ | $<chr>$ | $<chr>$ | $<chr>$ | $<dbl>$ | 
+| WandaVision	| series	| 2021	| Action, Comedy, Drama, Fantasy, Sci-Fi	| NA	| Elizabeth Olsen, Paul Bettany, Teyonah Parris, Kathryn Hahn	| N/A	| N/A	| 8.0 |
+| The Mandalorian	| series	|  NA	| Action, Adventure, Sci-Fi  |                         	40	| Pedro Pascal  |                                                  	N/A |                                 	Won 7 Primetime Emmys. Another 15 wins & 30 nominations.	| 8.8 |
+| Finding 'Ohana	| movie	| 2021	| Action, Adventure, Comedy, Family	| 123	| Kelly Hu, Ke Huy Quan, Chris Parnell, Marc Evan | Jackson	Jude Weng	| N/A	| NA |
+| Firefly Lane	| series	| NA	| Drama, Romance	| NA	| Beau Garrett, Sarah Chalke, Roan Curtis, Katherine Heigl	| N/A	| N/A	| NA | 
+| Bridgerton  |   	series	|  NA	| Drama, Romance  |                                    	60	| Jonathan Bailey, Harriet Cains, Bessie Carter, Nicola Coughlan | 	N/A  |                                	1 win & 7 nominations.  |                                	7.3 |
+| The Expanse |   	series	|  NA	| Drama, Mystery, Sci-Fi, Thriller  |                  	60	| Steven Strait, Dominique Tipper, Wes Chatham, Shohreh Aghdashloo	| N/A |                                 	3 wins & 20 nominations. |                               	8.5 |
+| The Stand	| series	| NA	| Adventure, Drama, Fantasy, Horror, Sci-Fi, Thriller	| NA	| James Marsden, Odessa Young, Gordon Cormier, Amber Heard	| N/A	| N/A	| 5.5 |
+| Soul  |         	movie	| 2020	| Animation, Adventure, Comedy, Family, Fantasy, Music	| 100	| Jamie Foxx, Tina Fey, Graham Norton, Rachel House  |             	Pete Docter, Kemp Powers(co-director)	| 37 wins & 28 nominations.  |                             	8.1 |
+
+
+#### get_actors(): Returns actors of searched movies, tv-series, and games
+`get_actors(search_text, type)` returns a dataframe with a column providing information about the actors of a movie, tv-series, or game.    
+
+- The user can replace the parameter search_text with any word as an argument. This inputted argument will be used to search the database and return titles containing the argument.
+- The user can replace the parameter type with arguments such as movie, series, episode, or game. This will only return titles of the specified type.    
+- If no argument is specified for the parameter type, the returned dataframe will contain titles with type movies, tv-series, and games.    
+- In this example, "guardians galaxy" is the argument for parameter search_text. Therefore, the function will return all titles of movies, tv-series, and games with the words "guardians" and "galaxy".
+
+```{r, eval = FALSE}
+get_actors("guardians galaxy")
+```
+
+| Title | Type | Year | Actors |
+|-----:|-:|-:|-----:|
+| $<chr>$  | $<chr>$  | $<dbl>$  | $<chr>$ |
+| Guardians of the Galaxy	| movie	| 2014	| Chris Pratt, Zoe Saldana, Dave Bautista, Vin Diesel |
+| Guardians of the Galaxy Vol. 2	| movie	| 2017	| Chris Pratt, Zoe Saldana, Dave Bautista, Vin Diesel |
+| Guardians of the Galaxy	| series	| NA	| Kevin Michael Richardson, Vanessa Marshall, David Sobolov, Will Friedle |
+| uardians of the Galaxy: Inferno	| movie	| 2017	| David Hasselhoff, Chris Pratt, Dave Bautista, Karen Gillan |
+| LEGO Marvel Super Heroes - Guardians of the Galaxy: The Thanos Threat	| movie	| 2017	| Jonathan Adams, Trevor Devall, Will Friedle, Jennifer Hale |
+| Disneyland Resort: Guardians of the Galaxy - Mission Breakout!	| movie	| 2017	| Bradley Cooper, Chris Pratt, Zoe Saldana, Dave Bautista |
+| Guardians of the Galaxy: The Telltale Series	| game	| 2017	| Scott Porter, Brandon Paul Eells, Emily O'Brien, Adam Harrington |
+| Bonus Round: The Making of 'Guardians of the Galaxy Vol. 2'	| movie	| 2017	| Kevin Feige, James Gunn, Chris Pratt |
+| Guardians of the Galaxy Vol. 3	| movie	| 2023	| Elizabeth Debicki, Karen Gillan, Zoe Saldana, Chris Pratt |
+| The Intergalactic Visual Effects of 'Guardians of the Galaxy'	| movie	| 2014	| Victoria Alonso, Bradley Cooper, Vin Diesel, James Gunn |
+
+#### get_awards(): Returns awards won by searched movies, tv-series, and games
+`get_awards(search_text, type)` returns a dataframe with a column providing information about awards won by a movie, tv-series, or game.    
+
+- The user can replace the parameter search_text with any word as an argument. This inputted argument will be used to search the database and return titles containing the argument.
+- The user can replace the parameter type with arguments such as movie, series, episode, or game. This will only return titles of the specified type.    
+- If no argument is specified for the parameter type, the returned dataframe will contain titles with type movies, tv-series, and games.    
+- In this example, "guardians galaxy" is the argument for parameter search_text. Therefore, the function will return all titles of movies, tv-series, and games with the words "guardians" and "galaxy".
+
+```{r, eval = FALSE}
+get_awards("guardians galaxy")
+```
+
+| Title | Type | Year | Director |
+|-----:|-:|-:|-----:|
+| $<chr>$  | $<chr>$  | $<dbl>$  | $<chr>$ |
+| Guardians of the Galaxy |  movie  | 2014 | Nominated for 2 Oscars. Another 52 wins & 100 nominations. |
+| Guardians of the Galaxy Vol 2 |  movie  | 2017 | Nominated for 1 Oscar. Another 15 wins & 57 nominations. |
+| Guardians of the Galaxy |  series  | NA | 2 wins & 2 nominations. |
+| Guardians of the Galaxy: Inferno |  movie  | 2017 | N/A |
+| LEGO Marvel Super Heroes - Guardians of the Galaxy: The Thanos Threat |  movie  | 2017 | N/A |
+| Disneyland Resort: Guardians of the Galaxy - Mission Breakout! |  movie  | 2017 | 1 nomination |
+| Guardians of the Galaxy: The Telltale Series |  game  | 2017 | N/A |
+| Bonus Round: The Making of 'Guardians of the Galaxy Vol. 2' |  movie  | 2017 | N/A |
+| Guardians of the Galaxy Vol. 3 |  movie  | 2023 | N/A |
+| The Intergalactic Visual Effects of 'Guardians of the Galaxy' |  movie  | 2014 | N/A |
+
+#### get_director(): Returns directors of searched movies, tv-series, and games
+`get_director(search_text, type)` returns a dataframe with a column providing information about the director(s) of a movie, tv-series, or game.
+
+- The user can replace the parameter search_text with any word as an argument. This inputted argument will be used to search the database and return titles containing the argument.
+- The user can replace the parameter type with arguments such as movie, series, episode, or game. This will only return titles of the specified type.    
+- If no argument is specified for the parameter type, the returned dataframe will contain titles with type movies, tv-series, and games.    
+- In this example, "guardians galaxy" is the argument for parameter search_text. Therefore, the function will return all titles of movies, tv-series, and games with the words "guardians" and "galaxy".  
+```{r, eval = FALSE}
+get_director("guardians galaxy")
+```
+
+| Title | Type | Year | Director |
+|-----:|-----:|-----:|-----:|
+| $<chr>$  | $<chr>$  | $<dbl>$  | $<chr>$ |
+| Guardians of the Galaxy |  movie  | 2014 | James Gunn |
+| Guardians of the Galaxy Vol 2 |  movie  | 2017 | James Gunn |
+| Guardians of the Galaxy |  series  | NA | N/A |
+| Guardians of the Galaxy: Inferno |  movie  | 2017 | James Gunn, David Yarovesky |
+| LEGO Marvel Super Heroes - Guardians of the Galaxy: The Thanos Threat |  movie  | 2017 | Michael D. Black |
+| Disneyland Resort: Guardians of the Galaxy - Mission Breakout! |  movie  | 2017 | N/A |
+| Guardians of the Galaxy: The Telltale Series |  game  | 2017 | Jonathan Stauder, Sean Ainsworth |
+| Bonus Round: The Making of 'Guardians of the Galaxy Vol. 2' |  movie  | 2017 | N/A |
+| Guardians of the Galaxy Vol. 3 |  movie  | 2023 | James Gunn |
+| The Intergalactic Visual Effects of 'Guardians of the Galaxy' |  movie  | 2014 | N/A |
+
+#### get_genre(): Returns genre of searched movies, tv-series, and games
+`get_genre(search_text, type)` returns a dataframe with a column providing information about the genre(s) of a movie, tv-series, or game.
+
+- The user can replace the parameter search_text with any word as an argument. This inputted argument will be used to search the database and return titles containing the argument.
+- The user can replace the parameter type with arguments such as movie, series, episode, or game. This will only return titles of the specified type.    
+- If no argument is specified for the parameter type, the returned dataframe will contain titles with type movies, tv-series, and games.    
+- In this example, "guardians" is the argument for parameter search_text. Therefore, the function will return all titles of movies, tv-series, and games with the word "guardians". 
+```{r, eval = FALSE}
+get_genre("guardians")
+```
+
+| Title | Type | Year | Genre |
+|-----:|-:|-:|-----:|
+| $<chr>$  | $<chr>$  | $<dbl>$  | $<dbl>$ |
+| Guardians of the Galaxy |  movie  | 2014 | Action, Adventure, Comedy, Sci-Fi |
+| Guardians of the Galaxy Vol 2 |  movie  | 2017 | Action, Adventure, Comedy, Sci-Fi |
+| Rise of the Guardians |  movie  | 2012 | Animation, Action, Adventure, Comedy, Family, Fantasy, Sci-Fi |
+| Rise of the Guardians |  movie  | 2012 | Animation, Action, Adventure, Comedy, Family, Fantasy, Sci-Fi |
+| Legend of the Guardians: The Owls of Ga'Hoole |  movie  | 2010 | Animation, Action, Adventure, Family, Fantasy, Mystery, Thriller, War |
+| Guardians |  movie  | 2017 | Action, Adventure, Comedy, Fantasy, Sci-Fi, Thriller |
+| 7 Guardians of the Tomb |  movie  | 2018 | Action, Adventure, Horror |
+| Naruto the Movie 3: Guardians of the Crescent Moon Kingdom |  movie  | 2006 | Animation, Action, Adventure |
+| Guardians of the Galaxy |  series  | NA | Animation, Action, Adventure, Comedy, Drama, Family, Sci-Fi |
+| Halo 5: Guardians |  game  | 2015 | Action, Adventure, Family, Sci-Fi, Thriller |
+
+#### get_poster(): Returns link to poster of searched movies, tv-series, and games
+`get_poster(search_text, type)` returns a dataframe with a column containing the link to a visual poster of the movie, tv-series, or game.
+
+- The user can replace the parameter search_text with any word as an argument. This inputted argument will be used to search the database and return titles containing the argument.
+- The user can replace the parameter type with arguments such as movie, series, episode, or game. This will only return titles of the specified type.    
+- If no argument is specified for the parameter type, the returned dataframe will contain titles with type movies, tv-series, and games.    
+- In this example, "guardians galaxy" is the argument for parameter search_text. Therefore, the function will return all titles of movies, tv-series, and games with the words "guardians" and "galaxy".  
+```{r, eval = FALSE}
+get_poster("guardians galaxy")
+```
+
+| Title | Type | Year | Poster (link) |
+|-----:|-:|-:|-----:|
+| $<chr>$  | $<chr>$  | $<dbl>$  | $<chr>$ |
+| Guardians of the Galaxy |  movie  | 2014 | https://m.media-amazon.com/images/M/MV5BMTAwMjU5OTgxNjZeQTJeQWpwZ15BbWU4MDUxNDYxODEx._V1_SX300.jpg |
+| Guardians of the Galaxy Vol 2 |  movie  | 2017 | https://m.media-amazon.com/images/M/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_SX300.jpg |
+| Guardians of the Galaxy |  series  | NA | https://m.media-amazon.com/images/M/MV5BNDM4NDQxMDU2MV5BMl5BanBnXkFtZTgwMDY2MDQ5NjE@._V1_SX300.jpg |
+| Guardians of the Galaxy: Inferno |  movie  | 2017 | https://m.media-amazon.com/images/M/MV5BZGQ0YzEyNWQtNGJiMi00NTAxLThkNDctNGY2ODkzYWMxZmZkXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg |
+| LEGO Marvel Super Heroes - Guardians of the Galaxy: The Thanos Threat |  movie  | 2017 | https://m.media-amazon.com/images/M/MV5BMjhlYzVhNTMtMmFkYy00NDhiLTkyNDgtYzhhMTZiMzM2OTA5XkEyXkFqcGdeQXVyNjI2OTgxNzY@._V1_SX300.jpg |
+| Disneyland Resort: Guardians of the Galaxy - Mission Breakout! |  movie  | 2017 | https://m.media-amazon.com/images/M/MV5BOTYwZmQwY2MtMzkwMC00ZjllLTg2YWItNzg1MzEzOThjYTkxXkEyXkFqcGdeQXVyMTA1MTY4NTkz._V1_SX300.jpg |
+| Guardians of the Galaxy: The Telltale Series |  game  | 2017 | https://m.media-amazon.com/images/M/MV5BMzkwYzJkOTYtOWVlZC00Mzk3LThlZTktYWY3MDM3N2IwZDA3XkEyXkFqcGdeQXVyNTk5Nzg0MDE@._V1_SX300.jpg |
+| Bonus Round: The Making of 'Guardians of the Galaxy Vol. 2' |  movie  | 2017 | N/A |
+| Guardians of the Galaxy Vol. 3 |  movie  | 2023 | https://m.media-amazon.com/images/M/MV5BMWM3ZWNlMjgtODZjMi00YTAwLWJhZTktMTM4NTgyMjE0NjMwXkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_SX300.jpg |
+| The Intergalactic Visual Effects of 'Guardians of the Galaxy' |  movie  | 2014 | N/A |
+
+#### get_rating(): Returns IMDB rating of searched movies, tv-series, and games
+`get_rating(search_text, type)` returns a dataframe with a column containing the IMDB Rating of a movie, tv-series, or game.
+
+- The user can replace the parameter search_text with any word as an argument. This inputted argument will be used to search the database and return titles containing the argument.
+- The user can replace the parameter type with arguments such as movie, series, episode, or game. This will only return titles of the specified type.    
+- If no argument is specified for the parameter type, the returned dataframe will contain titles with type movies, tv-series, and games.    
+- In this example, "guardians" is the argument for parameter search_text. Therefore, the function will return all titles of movies, tv-series, and games with the word "guardians".   
+```{r, eval = FALSE}
+get_rating("guardians")
+```
+
+| Title | Type | Year | IMDB Rating |
+|-----:|-----:|-----:|-----:|
+| $<chr>$  | $<chr>$  | $<dbl>$  | $<dbl>$ |
+| Guardians of the Galaxy |  movie  | 2014 | 8.0 |
+| Guardians of the Galaxy Vol 2 |  movie  | 2017 | 7.6 |
+| Rise of the Guardians |  movie  | 2012 | 7.3 |
+| Rise of the Guardians |  movie  | 2012 | 7.3 |
+| Legend of the Guardians: The Owls of Ga'Hoole |  movie  | 2010 | 6.9 |
+| Guardians |  movie  | 2017 | 3.9 |
+| 7 Guardians of the Tomb |  movie  | 2018 | 4.5 |
+| Naruto the Movie 3: Guardians of the Crescent Moon Kingdom |  movie  | 2006 | 6.5 |
+| Guardians of the Galaxy |  series  | NA | 7.4 |
+| Halo 5: Guardians |  game  | 2015 | 7.4 |
+
+#### get_runtime(): Returns runtime of searched movies, tv-series, and games
+`get_runtime(search_text, type)` returns a dataframe with a column containing the runtime of a movie, tv-series, or game.
+
+- The user can replace the parameter search_text with any word as an argument. This inputted argument will be used to search the database and return titles containing the argument.
+- The user can replace the parameter type with arguments such as movie, series, episode, or game. This will only return titles of the specified type.    
+- If no argument is specified for the parameter type, the returned dataframe will contain titles with type movies, tv-series, and games.    
+- In this example, "guardians" is the argument for parameter search_text. Therefore, the function will return all titles of movies, tv-series, and games with the word "guardians".   
+```{r, eval = FALSE}
+get_runtime("guardians")
+```
+
+| Title | Type | Year | Runtime (in minutes) |
+|-----:|-----:|-----:|-----:|
+| $<chr>$  | $<chr>$  | $<dbl>$  | $<dbl>$ |
+| Guardians of the Galaxy |  movie  | 2014 | 121 |
+| Guardians of the Galaxy Vol 2 |  movie  | 2017 | 136 |
+| Rise of the Guardians |  movie  | 2012 | 97 |
+| Rise of the Guardians |  movie  | 2012 | 97 |
+| Legend of the Guardians: The Owls of Ga'Hoole |  movie  | 2010 | 97 |
+| Guardians |  movie  | 2017 | 89 |
+| 7 Guardians of the Tomb |  movie  | 2018 | 90 |
+| Naruto the Movie 3: Guardians of the Crescent Moon Kingdom |  movie  | 2006 | 95 |
+| Guardians of the Galaxy |  series  | NA | 22 |
+| Halo 5: Guardians |  game  | 2015 | NA |
+
+
+#### get_writer(): Returns writers of searched movies, tv-series, and games
+`get_writer(search_text, type)` returns a dataframe with a column containing the writers of a movie, tv-series, or game.
+
+- The user can replace the parameter search_text with any word as an argument. This inputted argument will be used to search the database and return titles containing the argument.
+- The user can replace the parameter type with arguments such as movie, series, episode, or game. This will only return titles of the specified type.    
+- If no argument is specified for the parameter type, the returned dataframe will contain titles with type movies, tv-series, and games.    
+- In this example, "guardians galaxy" is the argument for parameter search_text. Therefore, the function will return all titles of movies, tv-series, and games with the words "guardians" and "galaxy".  
+```{r, eval = FALSE}
+get_writer("guardians galaxy")
+```
+
+| Title | Type | Year | Writer |
+|-----:|-----:|-----:|-----:|
+| $<chr>$  | $<chr>$  | $<dbl>$  | $<chr>$ |
+| Guardians of the Galaxy |  movie  | 2014 | James Gunn, Nicole Perlman, Dan Abnett (based on the Marvel comics by), Andy Lanning (based on the Marvel comics by), Bill Mantlo (character created by: Rocket Raccoon), Keith Giffen (character created by: Rocket Raccoon), Jim Starlin (characters created by: Drax the Destroyer, Gamora & Thanos), Steve Englehart (character created by: Star-Lord), Steve Gan (character created by: Star-Lord), Steve Gerber (character created by: Howard the Duck), Val Mayerik (character created by: Howard the Duck) |
+| Guardians of the Galaxy Vol 2 |  movie  | 2017 | James Gunn, Dan Abnett (based on the Marvel comics by), Andy Lanning (based on the Marvel comics by), Steve Englehart (Star-Lord created by), Steve Gan (Star-Lord created by), Jim Starlin (Gamora and Drax created by), Stan Lee (Groot created by), Larry Lieber (Groot created by), Jack Kirby (Groot created by), Bill Mantlo (Rocket Raccoon created by), Keith Giffen (Rocket Raccoon created by), Steve Gerber (Howard the Duck created by), Val Mayerik (Howard the Duck created by) |
+| Rise of the Guardians |  movie  | 2012 | Dan Abnett, Andy Lanning, Marty Isenberg, Henry Gilroy |
+| Rise of the Guardians |  movie  | 2012 | James Gunn |
+| Legend of the Guardians: The Owls of Ga'Hoole |  movie  | 2010 | Mark Hoffmeier, Dan Abnett (based on the marvel comics by), Andy Lanning (based on the marvel comics by), Bill Mantlo (character created by: Rocket Raccoon), Keith Giffen (character created by: Rocket Raccoon), Steve Englehart (character created by: Star-Lord), Steve Gan (character created by: Star-Lord), Jim Starlin (characters created by: Thanos, Gamora & Drax) |
+| Guardians |  movie  | 2017 | N/A |
+| 7 Guardians of the Tomb |  movie  | 2018 | Emily Grace Buck (Story by, segment "Under Pressure"), Erica Harnell (additional writing), Erica Harrell, Zack Keller, Nicole Martinez, Meghan Thornton, Tim Williams |
+| Naruto the Movie 3: Guardians of the Crescent Moon Kingdom |  movie  | 2006 | N/A |
+| Guardians of the Galaxy |  series  | NA | James Gunn, Dan Abnett (comic book), Andy Lanning (comic book) |
+| Halo 5: Guardians |  game  | 2015 | N/A |
+
+#### read_plot(): Returns plot summary of searched movies, tv-series, and games
+`read_plot(search_text, type, plot)` returns a dataframe with a column containing the plot of a movie, tv-series, or game.
+
+- The user can replace the parameter search_text with any word as an argument. This inputted argument will be used to search the database and return titles containing the argument.
+- The user can replace the parameter type with arguments such as movie, series, episode, or game. This will only return titles of the specified type.    
+- If no argument is specified for the parameter type, the returned dataframe will contain titles with type movies, tv-series, and games.    
+- The user can replace the parameter plot with arguments `short` or `full`.
+- If no argument is specified for the parameter plot, the returned dataframe will contain the `full` plot as a default.
+- In this example, "guardians" is the argument for parameter search_text. Therefore, the function will return all titles of movies, tv-series, and games with the word "guardians".    
+```{r, eval = FALSE}
+read_plot("guardians")
+```
+
+| Title | Type | Year | Plot |
+|-----:|-----:|-----:|-----:|
+| $<chr>$  | $<chr>$  | $<dbl>$  | $<dbl>$ |
+| Guardians of the Galaxy |  movie  | 2014 | A group of intergalactic criminals must pull together to stop a fanatical warrior with plans to purge the universe. |
+| Guardians of the Galaxy Vol 2 |  movie  | 2017 | The Guardians struggle to keep together as a team while dealing with their personal family issues, notably Star-Lord's encounter with his father the ambitious celestial being Ego. |
+| Rise of the Guardians |  movie  | 2012 | When the evil spirit Pitch launches an assault on Earth, the Immortal Guardians team up to protect the innocence of children all around the world. |
+| Rise of the Guardians |  movie  | 2012 | When the evil spirit Pitch launches an assault on Earth, the Immortal Guardians team up to protect the innocence of children all around the world. |
+| Legend of the Guardians: The Owls of Ga'Hoole |  movie  | 2010 | When a young owl is abducted by an evil Owl army, he must escape with new-found friends and seek the legendary Guardians to stop the menace. |
+| Guardians |  movie  | 2017 | During the Cold War, an organization called "Patriot" created a super-hero squad, which includes members of multiple Soviet republics. For years, the heroes had to hide their identities, but in hard times they must show themselves again. |
+| 7 Guardians of the Tomb |  movie  | 2018 | An innocent discovery of a well-preserved mummified Chinese Emperor from 200 B.C. unearths a two-thousand-year-old nightmare, a secret that should have remained buried. |
+| Naruto the Movie 3: Guardians of the Crescent Moon Kingdom |  movie  | 2006 | Naruto, Kakashi, Sakura, and Rock Lee are assigned to protect Michiru, the prince of the Land of the Moon, while he travel the world. The prince purchased a tiger Sham and the whole circus, which became the team's protection. |
+| Guardians of the Galaxy |  series  | NA | The adventures of a band of space warriors who work to protect the universe from the evil overlord Thanos. |
+| Halo 5: Guardians |  game  | 2015 | Peace is shattered when colony worlds are unexpectedly attacked. And when humanity's greatest hero goes missing, Spartan Jameson Locke is tasked with hunting the Master Chief and solving a mystery that threatens the entire galaxy. |
+
+#### search_all(): Returns all get_*() functions of searched movies, tv-series, and games in a dataframe
+
+`search_all(search_text, type)` returns a dataframe with attributes based on searched movies, tv-series, or games.
+
+- The user can replace the parameter search_text with any word as an argument. This inputted argument will be used to search the database and return titles containing the argument.
+- The user can replace the parameter type with arguments such as movie, series, episode, or game. This will only return titles of the specified type.    
+- If no argument is specified for the parameter type, the returned dataframe will contain titles with type movies, tv-series, and games.    
+- In this example, "guardians galaxy" is the argument for parameter search_text. Therefore, the function will return all titles of movies, tv-series, and games with the words "guardians" and "galaxy".  
+```{r, eval = FALSE}
+search_all("guardians galaxy")
+```
+
+| Title | Type | Year | Genre | Runtime (in minutes) | Actors | Director | Awards | IMDB Rating |
+|-:|-:|-:|-:|-:|-:|-:|-:|-:|
+| $<chr>$  | $<chr>$  | $<dbl>$  | $<chr>$ | $<dbl>$ | $<chr>$ | $<chr>$ | $<chr>$ | $<dbl>$ | 
+| Guardians of the Galaxy |  movie  | 2014 | Action, Adventure, Comedy, Sci-Fi | 121 | Chris Pratt, Zoe Saldana, Dave Bautista, Vin Diesel | James Gunn | Nominated for 2 Oscars. Another 52 wins & 100 nominations. | 8.0 |
+| Guardians of the Galaxy Vol 2 |  movie  | 2017 |  Action, Adventure, Comedy, Sci-Fi | 136 | Chris Pratt, Zoe Saldana, Dave Bautista, Vin Diesel | James Gunn | Kevin Michael Richardson, Vanessa Marshall, David Sobolov, Will Friedle | N/A | 2 wins & 2 nominations.	| 7.4 |
+| Guardians of the Galaxy |  series  | NA |  Animation, Action, Adventure, Comedy, Drama, Family, Sci-Fi | 22 | Kevin Michael Richardson, Vanessa Marshall, David Sobolov, Will Friedle | N/A | 2 wins & 2 nominations | 7.4 |
+| Guardians of the Galaxy: Inferno |  movie  | 2017 | Short, Comedy, Music | 4 | David Hasselhoff, Chris Pratt, Dave Bautista, Karen Gillan | James Gunn, David Yarovesky | N/A | 8.2 |
+| LEGO Marvel Super Heroes - Guardians of the Galaxy: The Thanos Threat |  movie  | 2017 | Animation, Short, Action, Adventure, Comedy, Fantasy, Sci-Fi | 22 | Jonathan Adams, Trevor Devall, Will Friedle, Jennifer Hale | Michael D. Black | N/A | 6.0 |
+| Disneyland Resort: Guardians of the Galaxy - Mission Breakout! |  movie  | 2017 | Short, Action, Adventure, Comedy, Fantasy, Sci-Fi | 21 | Bradley Cooper, Chris Pratt, Zoe Saldana, Dave Bautista | N/A | 1 nomination. | 8.3 |
+| Guardians of the Galaxy: The Telltale Series |  game  | 2017 | Adventure, Sci-Fi | NA | Scott Porter, Brandon Paul Eells, Emily O'Brien, Adam Harrington | Jonathan Stauder, Sean Ainsworth | N/A | 8.8
+| Bonus Round: The Making of 'Guardians of the Galaxy Vol. 2' |  movie  | 2017 | Documentary, Short | 39 | Kevin Feige, James Gunn, Chris Pratt | N/A | N/A | 7.1 |
+| Guardians of the Galaxy Vol. 3 |  movie  | 2023 | Action, Adventure, Comedy, Sci-Fi, Thriller | NA | Elizabeth Debicki, Karen Gillan, Zoe Saldana, Chris Pratt | James Gunn | N/A | NA |
+| The Intergalactic Visual Effects of 'Guardians of the Galaxy' |  movie  | 2014 | Short | 7 | Victor Alonso, Bradley Cooper, Vin Diesel, James Gunn | N/A | N/A | NA |
+
+#### Visualization: Civil War Mini-Game — Team Ironman vs Team Captain America
+
+```{r}
+library(R.vengers)
+library(ggplot2)
+library(tidyverse)
+```
+
+```{r}
+# load the result of the avengers_movies() function into a dataframe
+df_avengers <- avengers_movies()
+```
+
+```{r}
+# scatter plot of ratings
+with(df_avengers, plot(Year, `IMDB Rating`, main = "Rating of Avengers movies over time", xlab = 'Year', ylab = "Rating"))
+```
+
+```{r}
+# Team Ironman - Movies & Ratings
+team_iron_man <- df_avengers[c(1,3,7,16,18), c(1,9)]
+names(team_iron_man)[2] <- "Rating"
+team_iron_man
+```
+
+```{r}
+# Team Captain America - Movies & Ratings
+team_captain_america <- df_avengers[c(5,9,12,13,20), c(1,9)]
+names(team_captain_america)[2] <- "Rating"
+team_captain_america
+```
+
+```{r}
+# Civil War
+
+ratings_team_iron_man <- NA
+ratings_team_captain_america <- NA
+
+for(fight in 1:20) {
+    ratings_team_iron_man[fight] <- sample(team_iron_man$Rating, 1)
+    ratings_team_captain_america[fight] <- sample(team_captain_america$Rating, 1)
+}
+
+civil_war = data.frame("fight" = 1:20, "team_ironman" = ratings_team_iron_man, "team_cap" = ratings_team_captain_america)
+df_civil_war <- civil_war %>%
+  select(fight, team_ironman, team_cap) %>%
+  gather(key = "team", value = "score", -fight)
+```
+
+```{r}
+# Line Plot of scores for all head-to-head movie rating fights (comparisons)
+ggplot(df_civil_war, aes(x = fight, y = score)) + 
+    geom_line(aes(color = team)) + 
+    scale_color_manual(values = c("darkred", "steelblue")) +
+    ylim(6, 9)
+```
+
+```{r}
+# Who won the Civil War mini-game?
+results <- data.frame(table(ratings_team_captain_america > ratings_team_iron_man))
+names(results)[1] <- "Team"
+names(results)[2] <- "Wins"
+results$Team <- as.character(results$Team)
+results$Team[results$Team == 'TRUE'] <- "Team_Cap"
+results$Team[results$Team == 'FALSE'] <- "Team_Ironman"
+results
+```
+
+```{r}
+# Visualization of Results
+g <- ggplot(results, aes(Team)) + geom_bar(aes(weight = Wins, fill = Team)) 
+g + theme(legend.position = "top") + xlab("") + ylab("# of wins") + labs(fill = "")
 ```
