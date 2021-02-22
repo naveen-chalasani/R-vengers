@@ -1,5 +1,6 @@
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/naveen-chalasani/R.vengers/workflows/R-CMD-check/badge.svg)](https://github.com/naveen-chalasani/R.vengers/actions)  [![test-coverage](https://github.com/naveen-chalasani/R.vengers/workflows/test-coverage/badge.svg)](https://github.com/naveen-chalasani/R.vengers/actions)  [![Codecov test coverage](https://codecov.io/gh/naveen-chalasani/R.vengers/branch/main/graph/badge.svg)](https://codecov.io/gh/naveen-chalasani/R.vengers?branch=main)
+[![R-CMD-check](https://github.com/naveen-chalasani/R.vengers/workflows/R-CMD-check/badge.svg)](https://github.com/naveen-chalasani/R.vengers/actions)  [![test-coverage](https://github.com/naveen-chalasani/R.vengers/workflows/test-coverage/badge.svg)](https://github.com/naveen-chalasani/R.vengers/actions)  [![Codecov test coverage](https://codecov.io/gh/naveen-chalasani/R.vengers/branch/main/graph/badge.svg)](https://codecov.io/gh/naveen-chalasani/R.vengers?branch=main) 
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 <!-- badges: end -->
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
