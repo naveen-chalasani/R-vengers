@@ -15,7 +15,9 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Imports: 
         httr, 
-        jsonlite
+        jsonlite,
+        ggplot2,
+        tidyverse
 Suggests: 
     testthat (>= 3.0.0),
     covr,
