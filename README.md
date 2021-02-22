@@ -4,15 +4,6 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%"
-)
-```
-
 # R.vengers
 
 <!-- badges: start -->
@@ -23,6 +14,10 @@ knitr::opts_chunk$set(
 The OMDb API is a RESTful web service to obtain movie information, all content and images on the site are contributed and maintained by their users. For more information, visit their website: http://www.omdbapi.com/
 
 The API for the OMDb webservices can be accessed here: http://www.omdbapi.com/
+
+Welcome to the R.vengers package! Below, users will find instructions on how to use functions to return information about movies, tv-series, or games.
+- The 'Table of Functions' provides a brief summary of each function in this package.
+- Additionally, a detailed tutorial with examples is provided in the vignette.
 
 ## Installation
 
@@ -40,7 +35,6 @@ This is a basic example which shows you how to solve a common problem:
 
 ```{r example}
 library(R.vengers)
-## basic example code
 
 avengers_movies()
 surprise_me()
@@ -62,3 +56,7 @@ surprise_me()
 | `get_writer` |  returns a dataframe with a column containing the writer(s) of a movie, tv-series, or game  |
 | `read_plot` |  returns a dataframe with a column containing the full plot of a movie, tv-series, or game  |
 | `search_all` |  returns a dataframe with attributes and information to a list of movies, tv-series, or games  |
+
+## Code of Conduct
+
+Please note that the R.vengers project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
