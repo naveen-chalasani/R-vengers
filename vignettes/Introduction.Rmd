@@ -15,6 +15,8 @@ knitr::opts_chunk$set(
 
 ```{r setup}
 library(R.vengers)
+library(tidyverse)
+library(ggplot2)
 ```
 
 # Overview
@@ -376,12 +378,6 @@ search_all("guardians galaxy")
 | The Intergalactic Visual Effects of 'Guardians of the Galaxy' |  movie  | 2014 | Short | 7 | Victor Alonso, Bradley Cooper, Vin Diesel, James Gunn | N/A | N/A | NA |
 
 #### Visualization: Civil War Mini-Game — Team Ironman vs Team Captain America
-
-```{r}
-library(R.vengers)
-library(ggplot2)
-library(tidyverse)
-```
 
 ```{r}
 # load the result of the avengers_movies() function into a dataframe
