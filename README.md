@@ -15,7 +15,8 @@ The OMDb API is a RESTful web service to obtain movie information, all content a
 
 The API for the OMDb webservices can be accessed here: http://www.omdbapi.com/
 
-Welcome to the R.vengers package! Below, users will find instructions on how to use functions to return information about movies, tv-series, or games.
+
+Below, users will find instructions on how to use functions to return information about movies, tv-series, or games.
 - The 'Table of Functions' provides a brief summary of each function in this package.
 - Additionally, a detailed tutorial with examples is provided in the vignette.
 
@@ -25,13 +26,21 @@ You can install the development version from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
-
+# update packages if necessary
 
 devtools::install_github("naveen-chalasani/R.vengers")
 ```
+
+By default, devtools::install_github() will not build vignettes. You can force building with below code
+
+``` r
+# reference : https://r-pkgs.org/vignettes.html
+devtools::install_github("naveen-chalasani/R.vengers", build_vignettes = TRUE)
+```
+
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows how to use functions from this package.
 
 ```{r example}
 library(R.vengers)
