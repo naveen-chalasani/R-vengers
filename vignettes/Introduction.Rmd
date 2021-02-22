@@ -18,7 +18,9 @@ library(R.vengers)
 ```
 
 # Overview
-Welcome to the R.vengers package! 
+Welcome to the R.vengers package! Below, users will find instructions on how to use functions to return information about movies, tv-series, or games.
+- The 'Table of Functions' provides a brief summary of each function in this package.
+- Additionally, a detailed tutorial with examples is provided with each function.
 
 # Table of Functions
 | Function | Description |
